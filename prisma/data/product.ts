@@ -1,358 +1,358 @@
 
 const products = [
     {
-        nombre: "Café Caramel con Chocolate",
-        precio: 59.9,
-        imagen: "cafe_01",
-        categoriaId: 1
+        name: "Café Caramel con Chocolate",
+        price: 59.9,
+        image: "cafe_01",
+        categoryId: 1
       },
       {
-        nombre: "Café Frio con Chocolate Grande",
-        precio: 49.9,
-        imagen: "cafe_02",
-        categoriaId: 1
+        name: "Café Frio con Chocolate Grande",
+        price: 49.9,
+        image: "cafe_02",
+        categoryId: 1
       },
       {
-        nombre: "Latte Frio con Chocolate Grande",
-        precio: 54.9,
-        imagen: "cafe_03",
-        categoriaId: 1
+        name: "Latte Frio con Chocolate Grande",
+        price: 54.9,
+        image: "cafe_03",
+        categoryId: 1
       },
       {
-        nombre: "Latte Frio con Chocolate Grande",
-        precio: 54.9,
-        imagen: "cafe_04",
-        categoriaId: 1
+        name: "Latte Frio con Chocolate Grande",
+        price: 54.9,
+        image: "cafe_04",
+        categoryId: 1
       },
       {
-        nombre: "Malteada Fria con Chocolate Grande",
-        precio: 54.9,
-        imagen: "cafe_05",
-        categoriaId: 1
+        name: "Malteada Fria con Chocolate Grande",
+        price: 54.9,
+        image: "cafe_05",
+        categoryId: 1
       },
       {
-        nombre: "Café Mocha Caliente Chico",
-        precio: 39.9,
-        imagen: "cafe_06",
-        categoriaId: 1
+        name: "Café Mocha Caliente Chico",
+        price: 39.9,
+        image: "cafe_06",
+        categoryId: 1
       },
       {
-        nombre: "Café Mocha Caliente Grande con Chocolate",
-        precio: 59.9,
-        imagen: "cafe_07",
-        categoriaId: 1
+        name: "Café Mocha Caliente Grande con Chocolate",
+        price: 59.9,
+        image: "cafe_07",
+        categoryId: 1
       },
       {
-        nombre: "Café Caliente Capuchino Grande",
-        precio: 59.9,
-        imagen: "cafe_08",
-        categoriaId: 1
+        name: "Café Caliente Capuchino Grande",
+        price: 59.9,
+        image: "cafe_08",
+        categoryId: 1
       },
       {
-        nombre: "Café Mocha Caliente Mediano",
-        precio: 49.9,
-        imagen: "cafe_09",
-        categoriaId: 1
+        name: "Café Mocha Caliente Mediano",
+        price: 49.9,
+        image: "cafe_09",
+        categoryId: 1
       },
       {
-        nombre: "Café Mocha Frio con Caramelo Mediano",
-        precio: 49.9,
-        imagen: "cafe_10",
-        categoriaId: 1
+        name: "Café Mocha Frio con Caramelo Mediano",
+        price: 49.9,
+        image: "cafe_10",
+        categoryId: 1
       },
       {
-        nombre: "Café Mocha Frio con Chocolate Mediano",
-        precio: 49.9,
-        imagen: "cafe_11",
-        categoriaId: 1
+        name: "Café Mocha Frio con Chocolate Mediano",
+        price: 49.9,
+        image: "cafe_11",
+        categoryId: 1
       },
       {
-        nombre: "Café Espresso",
-        precio: 29.9,
-        imagen: "cafe_12",
-        categoriaId: 1
+        name: "Café Espresso",
+        price: 29.9,
+        image: "cafe_12",
+        categoryId: 1
       },
       {
-        nombre: "Café Capuchino Grande con Caramelo",
-        precio: 59.9,
-        imagen: "cafe_13",
-        categoriaId: 1
+        name: "Café Capuchino Grande con Caramelo",
+        price: 59.9,
+        image: "cafe_13",
+        categoryId: 1
       },
       {
-        nombre: "Café Caramelo Grande",
-        precio: 59.9,
-        imagen: "cafe_14",
-        categoriaId: 1
+        name: "Café Caramelo Grande",
+        price: 59.9,
+        image: "cafe_14",
+        categoryId: 1
       },
       {
-        nombre: "Paquete de 3 donas de Chocolate",
-        precio: 39.9,
-        imagen: "donas_01",
-        categoriaId: 4
+        name: "Paquete de 3 donas de Chocolate",
+        price: 39.9,
+        image: "donas_01",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 3 donas Glaseadas",
-        precio: 39.9,
-        imagen: "donas_02",
-        categoriaId: 4
+        name: "Paquete de 3 donas Glaseadas",
+        price: 39.9,
+        image: "donas_02",
+        categoryId: 4
       },
       {
-        nombre: "Dona de Fresa ",
-        precio: 19.9,
-        imagen: "donas_03",
-        categoriaId: 4
+        name: "Dona de Fresa ",
+        price: 19.9,
+        image: "donas_03",
+        categoryId: 4
       },
       {
-        nombre: "Dona con Galleta de Chocolate ",
-        precio: 19.9,
-        imagen: "donas_04",
-        categoriaId: 4
+        name: "Dona con Galleta de Chocolate ",
+        price: 19.9,
+        image: "donas_04",
+        categoryId: 4
       },
       {
-        nombre: "Dona glass con Chispas Sabor Fresa ",
-        precio: 19.9,
-        imagen: "donas_05",
-        categoriaId: 4
+        name: "Dona glass con Chispas Sabor Fresa ",
+        price: 19.9,
+        image: "donas_05",
+        categoryId: 4
       },
       {
-        nombre: "Dona glass con Chocolate ",
-        precio: 19.9,
-        imagen: "donas_06",
-        categoriaId: 4
+        name: "Dona glass con Chocolate ",
+        price: 19.9,
+        image: "donas_06",
+        categoryId: 4
       },
       {
-        nombre: "Dona de Chocolate con MÁS Chocolate ",
-        precio: 19.9,
-        imagen: "donas_07",
-        categoriaId: 4
+        name: "Dona de Chocolate con MÁS Chocolate ",
+        price: 19.9,
+        image: "donas_07",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 3 donas de Chocolate ",
-        precio: 39.9,
-        imagen: "donas_08",
-        categoriaId: 4
+        name: "Paquete de 3 donas de Chocolate ",
+        price: 39.9,
+        image: "donas_08",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 3 donas con Vainilla y Chocolate ",
-        precio: 39.9,
-        imagen: "donas_09",
-        categoriaId: 4
+        name: "Paquete de 3 donas con Vainilla y Chocolate ",
+        price: 39.9,
+        image: "donas_09",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 6 Donas",
-        precio: 69.9,
-        imagen: "donas_10",
-        categoriaId: 4
+        name: "Paquete de 6 Donas",
+        price: 69.9,
+        image: "donas_10",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 3 Variadas",
-        precio: 39.9,
-        imagen: "donas_11",
-        categoriaId: 4
+        name: "Paquete de 3 Variadas",
+        price: 39.9,
+        image: "donas_11",
+        categoryId: 4
       },
       {
-        nombre: "Dona Natural con Chocolate",
-        precio: 19.9,
-        imagen: "donas_12",
-        categoriaId: 4
+        name: "Dona Natural con Chocolate",
+        price: 19.9,
+        image: "donas_12",
+        categoryId: 4
       },
       {
-        nombre: "Paquete de 3 Donas de Chocolate con Chispas",
-        precio: 39.9,
-        imagen: "donas_13",
-        categoriaId: 4
+        name: "Paquete de 3 Donas de Chocolate con Chispas",
+        price: 39.9,
+        image: "donas_13",
+        categoryId: 4
       },
       {
-        nombre: "Dona Chocolate y Coco",
-        precio: 19.9,
-        imagen: "donas_14",
-        categoriaId: 4
+        name: "Dona Chocolate y Coco",
+        price: 19.9,
+        image: "donas_14",
+        categoryId: 4
       },
       {
-        nombre: "Paquete Galletas de Chocolate",
-        precio: 29.9,
-        imagen: "galletas_01",
-        categoriaId: 6
+        name: "Paquete Galletas de Chocolate",
+        price: 29.9,
+        image: "galletas_01",
+        categoryId: 6
       },
       {
-        nombre: "Paquete Galletas de Chocolate y Avena",
-        precio: 39.9,
-        imagen: "galletas_02",
-        categoriaId: 6
+        name: "Paquete Galletas de Chocolate y Avena",
+        price: 39.9,
+        image: "galletas_02",
+        categoryId: 6
       },
       {
-        nombre: "Paquete de Muffins de Vainilla",
-        precio: 39.9,
-        imagen: "galletas_03",
-        categoriaId: 6
+        name: "Paquete de Muffins de Vainilla",
+        price: 39.9,
+        image: "galletas_03",
+        categoryId: 6
       },
       {
-        nombre: "Paquete de 4 Galletas de Avena",
-        precio: 24.9,
-        imagen: "galletas_04",
-        categoriaId: 6
+        name: "Paquete de 4 Galletas de Avena",
+        price: 24.9,
+        image: "galletas_04",
+        categoryId: 6
       },
       {
-        nombre: "Galletas de Mantequilla Variadas",
-        precio: 39.9,
-        imagen: "galletas_05",
-        categoriaId: 6
+        name: "Galletas de Mantequilla Variadas",
+        price: 39.9,
+        image: "galletas_05",
+        categoryId: 6
       },
       {
-        nombre: "Galletas de sabores frutales",
-        precio: 39.9,
-        imagen: "galletas_06",
-        categoriaId: 6
+        name: "Galletas de sabores frutales",
+        price: 39.9,
+        image: "galletas_06",
+        categoryId: 6
       },
       {
-        nombre: "Hamburguesa Sencilla",
-        precio: 59.9,
-        imagen: "hamburguesas_01",
-        categoriaId: 2
+        name: "Hamburguesa Sencilla",
+        price: 59.9,
+        image: "hamburguesas_01",
+        categoryId: 2
       },
       {
-        nombre: "Hamburguesa de Pollo",
-        precio: 59.9,
-        imagen: "hamburguesas_02",
-        categoriaId: 2
+        name: "Hamburguesa de Pollo",
+        price: 59.9,
+        image: "hamburguesas_02",
+        categoryId: 2
       },
       {
-        nombre: "Hamburguesa de Pollo y Chili",
-        precio: 59.9,
-        imagen: "hamburguesas_03",
-        categoriaId: 2
+        name: "Hamburguesa de Pollo y Chili",
+        price: 59.9,
+        image: "hamburguesas_03",
+        categoryId: 2
       },
       {
-        nombre: "Hamburguesa Queso y  Pepinos",
-        precio: 59.9,
-        imagen: "hamburguesas_04",
-        categoriaId: 2
+        name: "Hamburguesa Queso y  Pepinos",
+        price: 59.9,
+        image: "hamburguesas_04",
+        categoryId: 2
       },
       {
-        nombre: "Hamburguesa Cuarto de Libra",
-        precio: 59.9,
-        imagen: "hamburguesas_05",
-        categoriaId: 2
+        name: "Hamburguesa Cuarto de Libra",
+        price: 59.9,
+        image: "hamburguesas_05",
+        categoryId: 2
       },
       {
-        nombre: "Hamburguesa Doble Queso",
-        precio: 69.9,
-        imagen: "hamburguesas_06",
-        categoriaId: 2
+        name: "Hamburguesa Doble Queso",
+        price: 69.9,
+        image: "hamburguesas_06",
+        categoryId: 2
       },
       {
-        nombre: "Hot Dog Especial",
-        precio: 49.9,
-        imagen: "hamburguesas_07",
-        categoriaId: 2
+        name: "Hot Dog Especial",
+        price: 49.9,
+        image: "hamburguesas_07",
+        categoryId: 2
       },
       {
-        nombre: "Paquete 2 Hot Dogs",
-        precio: 69.9,
-        imagen: "hamburguesas_08",
-        categoriaId: 2
+        name: "Paquete 2 Hot Dogs",
+        price: 69.9,
+        image: "hamburguesas_08",
+        categoryId: 2
       },
       {
-        nombre: "4 Rebanadas de Pay de Queso",
-        precio: 69.9,
-        imagen: "pastel_01",
-        categoriaId: 5
+        name: "4 Rebanadas de Pay de Queso",
+        price: 69.9,
+        image: "pastel_01",
+        categoryId: 5
       },
       {
-        nombre: "Waffle Especial",
-        precio: 49.9,
-        imagen: "pastel_02",
-        categoriaId: 5
+        name: "Waffle Especial",
+        price: 49.9,
+        image: "pastel_02",
+        categoryId: 5
       },
       {
-        nombre: "Croissants De la casa",
-        precio: 39.9,
-        imagen: "pastel_03",
-        categoriaId: 5
+        name: "Croissants De la casa",
+        price: 39.9,
+        image: "pastel_03",
+        categoryId: 5
       },
       {
-        nombre: "Pay de Queso",
-        precio: 19.9,
-        imagen: "pastel_04",
-        categoriaId: 5
+        name: "Pay de Queso",
+        price: 19.9,
+        image: "pastel_04",
+        categoryId: 5
       },
       {
-        nombre: "Pastel de Chocolate",
-        precio: 29.9,
-        imagen: "pastel_05",
-        categoriaId: 5
+        name: "Pastel de Chocolate",
+        price: 29.9,
+        image: "pastel_05",
+        categoryId: 5
       },
       {
-        nombre: "Rebanada Pastel de Chocolate",
-        precio: 29.9,
-        imagen: "pastel_06",
-        categoriaId: 5
+        name: "Rebanada Pastel de Chocolate",
+        price: 29.9,
+        image: "pastel_06",
+        categoryId: 5
       },
       {
-        nombre: "Pizza Spicy con Doble Queso",
-        precio: 69.9,
-        imagen: "pizzas_01",
-        categoriaId: 3
+        name: "Pizza Spicy con Doble Queso",
+        price: 69.9,
+        image: "pizzas_01",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Jamón y Queso",
-        precio: 69.9,
-        imagen: "pizzas_02",
-        categoriaId: 3
+        name: "Pizza Jamón y Queso",
+        price: 69.9,
+        image: "pizzas_02",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Doble Queso",
-        precio: 69.9,
-        imagen: "pizzas_03",
-        categoriaId: 3
+        name: "Pizza Doble Queso",
+        price: 69.9,
+        image: "pizzas_03",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Especial de la Casa",
-        precio: 69.9,
-        imagen: "pizzas_04",
-        categoriaId: 3
+        name: "Pizza Especial de la Casa",
+        price: 69.9,
+        image: "pizzas_04",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Chorizo",
-        precio: 69.9,
-        imagen: "pizzas_05",
-        categoriaId: 3
+        name: "Pizza Chorizo",
+        price: 69.9,
+        image: "pizzas_05",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Hawaiana",
-        precio: 69.9,
-        imagen: "pizzas_06",
-        categoriaId: 3
+        name: "Pizza Hawaiana",
+        price: 69.9,
+        image: "pizzas_06",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Tocino",
-        precio: 69.9,
-        imagen: "pizzas_07",
-        categoriaId: 3
+        name: "Pizza Tocino",
+        price: 69.9,
+        image: "pizzas_07",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Vegetales y Queso",
-        precio: 69.9,
-        imagen: "pizzas_08",
-        categoriaId: 3
+        name: "Pizza Vegetales y Queso",
+        price: 69.9,
+        image: "pizzas_08",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Pepperoni y Queso",
-        precio: 69.9,
-        imagen: "pizzas_09",
-        categoriaId: 3
+        name: "Pizza Pepperoni y Queso",
+        price: 69.9,
+        image: "pizzas_09",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Aceitunas y Queso",
-        precio: 69.9,
-        imagen: "pizzas_10",
-        categoriaId: 3
+        name: "Pizza Aceitunas y Queso",
+        price: 69.9,
+        image: "pizzas_10",
+        categoryId: 3
       },
       {
-        nombre: "Pizza Queso, Jamón y Champiñones",
-        precio: 69.9,
-        imagen: "pizzas_11",
-        categoriaId: 3
+        name: "Pizza Queso, Jamón y Champiñones",
+        price: 69.9,
+        image: "pizzas_11",
+        categoryId: 3
       }
 ]
 
