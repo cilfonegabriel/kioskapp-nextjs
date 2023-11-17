@@ -6,13 +6,13 @@ const KioskProvider = ({children}) => {
     
 
     return (
-        <kioskContext.Provider
+        <KioskContext.Provider
             value={{
 
             }}
         >
             {children}
-        </kioskContext.Provider>
+        </KioskContext.Provider>
     )
 }
 
