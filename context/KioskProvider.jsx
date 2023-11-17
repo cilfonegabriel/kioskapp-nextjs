@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 
-const kioskContext = createContext()
+const KioskContext = createContext()
 
 const KioskProvider = ({children}) => {
     
@@ -20,4 +20,4 @@ export{
     KioskProvider
 }
 
-export default kioskContext
+export default KioskContext
