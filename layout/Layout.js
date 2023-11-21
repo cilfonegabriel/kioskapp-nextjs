@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Sidebar from "../components/Sidebar"
 import Modal from "react-modal"
+import ModalProduct from "../components/ModalProduct";
 import useKiosk from "../hooks/useKiosk";
 
 const customStyles = {
@@ -43,9 +44,7 @@ export default function Layout({children, page}) {
                     isOpen={modal}
                     style={customStyles}
                 >
-                    <h1>
-                        Modal...
-                    </h1>
+                    <ModalProduct />
                 </Modal>
             )}
         </>
