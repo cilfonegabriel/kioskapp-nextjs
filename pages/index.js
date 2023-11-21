@@ -15,7 +15,7 @@ export default function Home() {
         Choose and customize your order below
       </p>
       
-      <div className='grid gap-4 grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+      <div className='grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {actualCategory?.products?.map(product =>(
           <Product key={product.id} product={product} />
         ))}
