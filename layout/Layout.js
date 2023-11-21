@@ -1,7 +1,24 @@
 import Head from "next/head"
 import Sidebar from "../components/Sidebar"
+import Modal from "react-modal"
+import useKiosk from "../hooks/useKiosk";
+
+const customStyles = {
+    content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    },
+};
+
+Modal.setAppElement('#__next');
 
 export default function Layout({children, page}) {
+
+    const {modal} = useKiosk()
     return (
         <>
             <Head>
@@ -20,6 +37,17 @@ export default function Layout({children, page}) {
                     </div>
                 </main>
             </div>
+
+            {modal && (
+                <Modal
+                    isOpen={modal}
+                    style={customStyles}
+                >
+                    <h1>
+                        Modal...
+                    </h1>
+                </Modal>
+            )}
         </>
     )
   }
