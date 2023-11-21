@@ -14,10 +14,14 @@ export default function Home() {
       <p className='text-2xl my-10'>
         Choose and customize your order below
       </p>
+      
+      <div className='grid gap-4 grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+        {actualCategory?.products?.map(product =>(
+          <Product key={product.id} product={product} />
+        ))}
+      </div>
 
-      {actualCategory?.products?.map(product =>(
-        <Product key={product.id} product={product} />
-      ))}
+
     </Layout>
   )
 }
