@@ -17,6 +17,7 @@ const ModalProduct = () => {
         </div>
 
         <div className="md:w-2/3">
+            <h1 className="text-3xl font-bold mt-5">{product.name}</h1>
 
         </div>
     </div>
