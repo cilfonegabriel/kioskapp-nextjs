@@ -8,6 +8,7 @@ const KioskProvider = ({children}) => {
     const [categories, setCategories] = useState([])
     const [actualCategory, setActualCategory] = useState({})
     const [product, setProduct] = useState({})
+    const [modal, setModal] = useState(false)
 
     const getCategories = async () => {
         const {data} = await axios('/api/categories')
@@ -31,6 +32,10 @@ const KioskProvider = ({children}) => {
         setProduct(product)
     }
 
+    const handleChangeModal = () => {
+        setModal(!modal)
+    }
+
     return (
         <KioskContext.Provider
             value={{
@@ -38,7 +43,9 @@ const KioskProvider = ({children}) => {
                 actualCategory,
                 handleClickCategory,
                 product,
-                handleSetProduct
+                handleSetProduct,
+                modal,
+                handleChangeModal
             }}
         >
             {children}
