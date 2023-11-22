@@ -15,6 +15,7 @@ const Category = ({category}) => {
             height={70}
             src={`/assets/img/icono_${icon}.svg`}
             alt="Imagen Icon"
+            priority={true}
         />
 
         <button
