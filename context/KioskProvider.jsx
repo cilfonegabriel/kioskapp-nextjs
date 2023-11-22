@@ -37,7 +37,7 @@ const KioskProvider = ({children}) => {
         setModal(!modal)
     }
 
-    const handleAddOrder = (product) => {
+    const handleAddOrder = ({categoryId, image,...product}) => {
         setOrder([...oder, product])
     }
 
