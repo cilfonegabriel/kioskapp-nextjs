@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Image from "next/image"
 import useKiosk from "../hooks/useKiosk"
 import {formatMoney} from "../helpers" 
@@ -5,6 +6,7 @@ import {formatMoney} from "../helpers"
 const ModalProduct = () => {
 
     const { product, handleChangeModal } = useKiosk()
+    const [amount, setAmount] = useState(1)
 
   return (
     <div className="md:flex gap-10">
@@ -42,13 +44,15 @@ const ModalProduct = () => {
             <p className="mt-5 font-black text-5xl text-amber-500">
                 {formatMoney(product.price)}
             </p>
-            <div>
+            <div className="flex gap-4 mt-5">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </button>
 
+                <p className="text-3xl">{amount}</p>
+                
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
