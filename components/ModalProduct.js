@@ -5,7 +5,7 @@ import {formatMoney} from "../helpers"
 
 const ModalProduct = () => {
 
-    const { product, handleChangeModal } = useKiosk()
+    const { product, handleChangeModal, handleAddOrder } = useKiosk()
     const [amount, setAmount] = useState(1)
 
   return (
@@ -75,6 +75,7 @@ const ModalProduct = () => {
             <button
                 type="button"
                 className="bg-indigo-600 hover:bg-indigo-800 px-5 py-2 mt-5 text-white font-bold uppercase rounded"
+                onClick={() => handleAddOrder({...product, amount})}
             >
                 Add to Order
             </button>
