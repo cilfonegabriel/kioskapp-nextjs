@@ -43,6 +43,7 @@ export default function Layout({children, page}) {
                 <Modal
                     isOpen={modal}
                     style={customStyles}
+                    
                 >
                     <ModalProduct />
                 </Modal>
