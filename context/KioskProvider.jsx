@@ -9,7 +9,7 @@ const KioskProvider = ({children}) => {
     const [actualCategory, setActualCategory] = useState({})
     const [product, setProduct] = useState({})
     const [modal, setModal] = useState(false)
-    const [oder, setOrder] = useState([])
+    const [order, setOrder] = useState([])
 
     const getCategories = async () => {
         const {data} = await axios('/api/categories')
@@ -38,7 +38,15 @@ const KioskProvider = ({children}) => {
     }
 
     const handleAddOrder = ({categoryId, image,...product}) => {
-        setOrder([...oder, product])
+        if(order.some(productState => productState.id === product.id)) {
+            //Update order.
+
+            const updateOrder = order.map(productState => productState.id === product.id ? product : productState)
+            setOrder(updateOrder)
+        } else {
+            setOrder([...order, product])
+        }
+
     }
 
     return (
