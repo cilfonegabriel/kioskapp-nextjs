@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Sidebar from "../components/Sidebar"
 import Modal from "react-modal"
+import { ToastContainer } from "react-toastify";
 import ModalProduct from "../components/ModalProduct";
 import useKiosk from "../hooks/useKiosk";
 
