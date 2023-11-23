@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
+import { Toast } from "react-toastify";
 
 const KioskContext = createContext()
 
