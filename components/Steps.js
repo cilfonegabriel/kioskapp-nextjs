@@ -7,9 +7,11 @@ const steps = [
 const Steps = () => {
   return (
     <>
-      <div>
+      <div className="flex justify-between mb-5">
         {steps.map((step) =>(
-            <button key={step.step}>
+            <button
+                className="text-2xl font-bold" 
+                key={step.step}>
                 {step.name}
             </button>
         ))}
