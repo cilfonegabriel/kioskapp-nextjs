@@ -5,7 +5,6 @@ export default function Resume () {
         <Layout page="Resume">
              <h1 className="text-4xl font-black">Resume</h1>
              <p className="text-2xl my-10">Check your Order</p>
-
         </Layout>
     )
 }
