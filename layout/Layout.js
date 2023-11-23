@@ -4,6 +4,7 @@ import Modal from "react-modal"
 import { ToastContainer } from "react-toastify";
 import ModalProduct from "../components/ModalProduct";
 import useKiosk from "../hooks/useKiosk";
+import "react-toastify/dist/ReactToastify.css"
 
 const customStyles = {
     content: {
