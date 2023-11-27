@@ -1,4 +1,5 @@
 import Image from "next/image"
+import {formatMoney} from '../helpers'
 
 const ResumeProduct = ({product}) => {
   return (
@@ -15,6 +16,7 @@ const ResumeProduct = ({product}) => {
       <div className="md:w-5/6">
         <p className="text-3xl font-bold">{product.name}</p>
         <p className="text-xl font-bold mt-2">Amount: {product.amount}</p>
+        <p className="text-xl font-bold text-amber-500 mt-2">Price: {formatMoney( product.price)}</p>
       </div>
     </div>
   )
