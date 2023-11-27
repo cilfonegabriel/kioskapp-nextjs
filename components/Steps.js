@@ -9,7 +9,10 @@ const steps = [
 
 const Steps = () => {
 
+    const {handleChangeStep, step} = useKiosk();
     const router = useRouter()
+
+    console.log(step)
 
     return (
       <>
@@ -18,6 +21,7 @@ const Steps = () => {
               <button
                   onClick={() => {
                       router.push(step.url)
+                      handleChangeStep(step.step)
                   }}
                   className="text-2xl font-bold" 
                   key={step.step}
@@ -25,6 +29,12 @@ const Steps = () => {
                   {step.name}
               </button>
           ))}
+        </div>
+
+        <div className="bg-gray-100 mb-10">
+          <div className="rounded-full bg-amber-500 text-xs leading-none h-2 text-center text-white w-10">
+
+          </div>
         </div>
       </>
     )
