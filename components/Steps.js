@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import useKiosk from "../hooks/useKiosk";
 
 const steps = [
     {step:1, name:"Menú", url:"/"},
@@ -9,7 +8,6 @@ const steps = [
 
 const Steps = () => {
 
-    const {handleChangeStep} = useKiosk();
     const router = useRouter()
 
     const calculateProgress = () => {
@@ -31,7 +29,6 @@ const Steps = () => {
               <button
                   onClick={() => {
                       router.push(step.url)
-                      handleChangeStep(step.step)
                   }}
                   className="text-2xl font-bold" 
                   key={step.step}
