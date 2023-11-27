@@ -14,6 +14,7 @@ const ResumeProduct = ({product}) => {
 
       <div className="md:w-5/6">
         <p className="text-3xl font-bold">{product.name}</p>
+        <p className="text-xl font-bold mt-2">Amount: {product.amount}</p>
       </div>
     </div>
   )
