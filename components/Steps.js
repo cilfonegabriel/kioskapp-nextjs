@@ -9,14 +9,14 @@ const steps = [
 
 const Steps = () => {
 
-    const {handleChangeStep, step} = useKiosk();
+    const {handleChangeStep} = useKiosk();
     const router = useRouter()
 
     const calculateProgress = () => {
       let value 
-      if(step === 1) {
+      if(router.pathname === "/") {
         value = 2
-      } else if(step === 2) {
+      } else if(router.pathname === "/resume") {
         value = 50
       } else {
         value = 100
