@@ -12,7 +12,17 @@ const Steps = () => {
     const {handleChangeStep, step} = useKiosk();
     const router = useRouter()
 
-    console.log(step)
+    const calculateProgress = () => {
+      let value 
+      if(step === 1) {
+        value = 2
+      } else if(step === 2) {
+        value = 50
+      } else {
+        value = 100
+      }
+      return value
+    }
 
     return (
       <>
@@ -32,7 +42,7 @@ const Steps = () => {
         </div>
 
         <div className="bg-gray-100 mb-10">
-          <div className="rounded-full bg-amber-500 text-xs leading-none h-2 text-center text-white w-10">
+          <div className="rounded-full bg-amber-500 text-xs leading-none h-2 text-center text-white" style={{width: `${calculateProgress()}%`}}>
 
           </div>
         </div>
