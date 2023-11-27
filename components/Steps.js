@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import useKiosk from "../hooks/useKiosk";
 
 const steps = [
     {step:1, name:"Menú", url:"/"},

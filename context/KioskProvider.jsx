@@ -53,6 +53,10 @@ const KioskProvider = ({children}) => {
         setModal(false)
     }
 
+    const handleChangeStep = step => {
+        setStep(step)
+    }
+
     return (
         <KioskContext.Provider
             value={{
@@ -64,7 +68,9 @@ const KioskProvider = ({children}) => {
                 modal,
                 handleChangeModal,
                 handleAddOrder,
-                order
+                order,
+                step,
+                handleChangeStep
             }}
         >
             {children}
