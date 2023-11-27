@@ -11,6 +11,10 @@ const ResumeProduct = ({product}) => {
           src={`/assets/img/${product.image}.jpg`}
         />
       </div>
+
+      <div className="md:w-5/6">
+        <p className="text-3xl font-bold">{product.name}</p>
+      </div>
     </div>
   )
 }
