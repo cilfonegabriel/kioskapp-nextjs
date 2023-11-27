@@ -17,6 +17,7 @@ const ResumeProduct = ({product}) => {
         <p className="text-3xl font-bold">{product.name}</p>
         <p className="text-xl font-bold mt-2">Amount: {product.amount}</p>
         <p className="text-xl font-bold text-amber-500 mt-2">Price: {formatMoney( product.price)}</p>
+        <p className="text-sm text-gray-700 mt-2">Subtotal: {formatMoney( product.price * product.amount)}</p>
       </div>
     </div>
   )
