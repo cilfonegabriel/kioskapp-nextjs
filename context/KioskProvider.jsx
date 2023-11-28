@@ -59,6 +59,11 @@ const KioskProvider = ({children}) => {
         setModal(!modal)
     }
 
+    const handleDeleteProduct = id => {
+        const updateOrder = order.filter(product => product.id !== id)
+        setOrder(updateOrder)
+    }
+
     return (
         <KioskContext.Provider
             value={{
@@ -71,7 +76,8 @@ const KioskProvider = ({children}) => {
                 handleChangeModal,
                 handleAddOrder,
                 order,
-                handleEditAmounts
+                handleEditAmounts,
+                handleDeleteProduct
             }}
         >
             {children}
