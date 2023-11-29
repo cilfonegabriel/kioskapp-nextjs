@@ -6,22 +6,20 @@ const Sidebar = () => {
 
     const { categories } = useKiosk();
 
-  return (
-    <>
-        <Image width={300} height={100} src="/assets/img/logo.svg" alt="imagen logotipo" priority={true} />
+    return (
+        <>
+            <Image width={300} height={100} src="/assets/img/logo.svg" alt="imagen logotipo" priority={true} />
 
-        <nav className="mt-10">
-            {categories.map(category => (
-                <Category 
-                    key={category.id}
-                    category={category}
-                />
-            ))} 
-        </nav>
-    </>
-
-
-  )
+            <nav className="mt-10">
+                {categories.map(category => (
+                    <Category 
+                        key={category.id}
+                        category={category}
+                    />
+                ))} 
+            </nav>
+        </>
+    )
 }
 
 export default Sidebar

@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const KioskContext = createContext()
 
@@ -11,6 +12,10 @@ const KioskProvider = ({children}) => {
     const [product, setProduct] = useState({})
     const [modal, setModal] = useState(false)
     const [order, setOrder] = useState([])
+    const [name, setName] = useState('')
+    const [total, setTotal] = useState(0)
+    
+    const router = useRouter()
 
     const getCategories = async () => {
         const {data} = await axios('/api/categories')
@@ -25,9 +30,15 @@ const KioskProvider = ({children}) => {
         setActualCategory(categories[0])
     }, [categories])
 
+    useEffect(() => {
+        const newTotal = order.reduce((total, product) => (product.price * product.amount) + total, 0)
+        setTotal(newTotal)
+    }, [order])
+
     const handleClickCategory = id => {
         const category =  categories.filter( cat => cat.id === id )
         setActualCategory(category[0])
+        router.push("/")
     }
 
     const handleSetProduct = product => {
@@ -52,6 +63,22 @@ const KioskProvider = ({children}) => {
         setModal(false)
     }
 
+    const handleEditAmounts = id => {
+        const updateProduct = order.filter(product => product.id === id)
+        setProduct(updateProduct[0])
+
+        setModal(!modal)
+    }
+
+    const handleDeleteProduct = id => {
+        const updateOrder = order.filter(product => product.id !== id)
+        setOrder(updateOrder)
+    }
+
+    const addOrder = async (e) => {
+        e.preventDefault();
+    };
+
     return (
         <KioskContext.Provider
             value={{
@@ -64,6 +91,12 @@ const KioskProvider = ({children}) => {
                 handleChangeModal,
                 handleAddOrder,
                 order,
+                handleEditAmounts,
+                handleDeleteProduct,
+                setName,
+                name,
+                addOrder,
+                total
             }}
         >
             {children}
