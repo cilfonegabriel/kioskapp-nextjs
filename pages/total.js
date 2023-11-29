@@ -19,6 +19,12 @@ export default function Total () {
                 <div className="mt-10">
                     <p className="text-2xl">Total to Pay: {''} <span className="font-bold">$</span></p>
                 </div>
+                <div className="mt-5">
+                    <input
+                        className="bg-indigo-600 w-full lg:w-auto px-5 py-2 rounded uppercase font-bold text-white text-center"
+                        value="Confirm Order" 
+                    />
+                </div>
             </form>
         </Layout>
     )
