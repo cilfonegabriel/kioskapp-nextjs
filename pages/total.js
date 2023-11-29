@@ -15,6 +15,10 @@ export default function Total () {
                         className="bg-gray-200 w-full lg:w-1/3 mt-3 p-2 rounded-md"
                     />
                 </div>
+
+                <div className="mt-10">
+                    <p className="text-2xl">Total to Pay: {''} <span className="font-bold">$</span></p>
+                </div>
             </form>
         </Layout>
     )
