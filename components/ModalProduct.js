@@ -17,7 +17,6 @@ const ModalProduct = () => {
         }
     },[product, order])
 
-
   return (
     <div className="md:flex gap-10">
         <div className="md:w-1/3">

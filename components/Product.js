@@ -6,7 +6,7 @@ const Product = ({product}) => {
 
   const {handleSetProduct, handleChangeModal} = useKiosk()
  
-    const { name, image, price } = product
+  const { name, image, price } = product
 
   return (
     <div className="border p-3">

@@ -1,19 +1,22 @@
+import { useEffect, useCallback } from "react";
 import Layout from "../layout/Layout"
-import { useEffect } from "react";
 import useKiosk from "../hooks/useKiosk";
 
 export default function Total () {
 
     const {order} = useKiosk()
 
-    const checkOrder = () => {
-        return order.length === 0
-    }
+    const checkOrder = useCallback (() => {
+        return order.length === 0;
+    }, [order])
 
-    const addOrder = e => {
+    useEffect (() => {
+        checkOrder()
+    }, [order, checkOrder])
+
+    const addOrder = (e) => {
         e.preventDefault();
-        console.log("Get order")
-    }
+    };
 
     return (
         <Layout page="Total and confirm your order">
@@ -38,8 +41,9 @@ export default function Total () {
                 <div className="mt-5">
                     <input
                         type="submit"
-                        className="bg-indigo-600 w-full lg:w-auto px-5 py-2 rounded uppercase font-bold text-white text-center"
+                        className={`${checkOrder() ? 'bg-indigo-100' : " bg-indigo-600 hover:bg-indigo-800" } w-full lg:w-auto px-5 py-2 rounded uppercase font-bold text-white text-center`}
                         value="Confirm Order" 
+                        disabled={checkOrder()}
                     />
                 </div>
             </form>
