@@ -4,7 +4,7 @@ import useKiosk from "../hooks/useKiosk";
 
 export default function Total () {
 
-    const {name, setName, order} = useKiosk()
+    const {name, setName, order, addOrder} = useKiosk()
 
     const checkOrder = useCallback (() => {
         return order.length === 0 || name === '' || name.length < 3;
@@ -13,10 +13,6 @@ export default function Total () {
     useEffect (() => {
         checkOrder()
     }, [order, checkOrder])
-
-    const addOrder = (e) => {
-        e.preventDefault();
-    };
 
     return (
         <Layout page="Total and confirm your order">

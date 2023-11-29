@@ -13,7 +13,8 @@ const KioskProvider = ({children}) => {
     const [modal, setModal] = useState(false)
     const [order, setOrder] = useState([])
     const [name, setName] = useState('')
-
+    const [total, setTotal] = useState(0)
+    
     const router = useRouter()
 
     const getCategories = async () => {
@@ -28,6 +29,11 @@ const KioskProvider = ({children}) => {
     useEffect(() => {
         setActualCategory(categories[0])
     }, [categories])
+
+    useEffect(() => {
+        const newTotal = order.reduce((total, product) => (product.price * product.amount) + total, 0)
+        setTotal(newTotal)
+    }, [order])
 
     const handleClickCategory = id => {
         const category =  categories.filter( cat => cat.id === id )
@@ -69,6 +75,10 @@ const KioskProvider = ({children}) => {
         setOrder(updateOrder)
     }
 
+    const addOrder = async (e) => {
+        e.preventDefault();
+    };
+
     return (
         <KioskContext.Provider
             value={{
@@ -84,7 +94,9 @@ const KioskProvider = ({children}) => {
                 handleEditAmounts,
                 handleDeleteProduct,
                 setName,
-                name
+                name,
+                addOrder,
+                total
             }}
         >
             {children}
