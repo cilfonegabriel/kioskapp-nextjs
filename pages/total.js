@@ -1,10 +1,11 @@
 import { useEffect, useCallback } from "react";
 import Layout from "../layout/Layout"
 import useKiosk from "../hooks/useKiosk";
+import {formatMoney} from "../helpers"
 
 export default function Total () {
 
-    const {name, setName, order, addOrder} = useKiosk()
+    const {name, setName, order, addOrder, total} = useKiosk()
 
     const checkOrder = useCallback (() => {
         return order.length === 0 || name === '' || name.length < 3;
@@ -34,7 +35,7 @@ export default function Total () {
                 </div>
 
                 <div className="mt-10">
-                    <p className="text-2xl">Total to Pay: {''} <span className="font-bold">$</span></p>
+                    <p className="text-2xl">Total to Pay: {''} <span className="font-bold">{formatMoney(total)}</span></p>
                 </div>
                 <div className="mt-5">
                     <input
