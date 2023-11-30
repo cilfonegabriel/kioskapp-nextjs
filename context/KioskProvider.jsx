@@ -14,7 +14,7 @@ const KioskProvider = ({children}) => {
     const [order, setOrder] = useState([])
     const [name, setName] = useState('')
     const [total, setTotal] = useState(0)
-    
+
     const router = useRouter()
 
     const getCategories = async () => {
@@ -77,6 +77,13 @@ const KioskProvider = ({children}) => {
 
     const addOrder = async (e) => {
         e.preventDefault();
+
+        try {
+            const {data} = await axios.post('/api/orders', {order, name, total, date: Date.now().toString()})
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
     };
 
     return (
