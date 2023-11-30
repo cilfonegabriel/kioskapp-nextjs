@@ -80,7 +80,19 @@ const KioskProvider = ({children}) => {
 
         try {
             const {data} = await axios.post('/api/orders', {order, name, total, date: Date.now().toString()})
-            console.log(data)
+            
+            //Reset app
+            setActualCategory(categories[0])
+            setOrder([])
+            setName('')
+            setTotal(0)
+
+            toast.success('Order placed correctly')
+
+            setTimeout(() => {
+                router.push('/')
+            }, 3000);
+            
         } catch (error) {
             console.log(error)
         }
