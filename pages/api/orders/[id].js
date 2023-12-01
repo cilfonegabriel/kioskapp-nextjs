@@ -1,6 +1,20 @@
+import { PrismaClient } from "@prisma/client"
+
 export default async function handler(req, res) {
 
+    const prisma = new PrismaClient();
+
     if(req.method === 'POST'){
-        console.log('Actualizando')
+        const {id} = req.query
+
+        const orderUpdate = await prisma.order.update({
+            where: {
+                id: parseInt(id)
+            },
+            data: {
+                state: true
+            }
+        })
+        res.status(200).json(orderUpdate)
     }
 }
