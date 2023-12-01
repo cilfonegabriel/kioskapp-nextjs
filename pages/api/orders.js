@@ -4,6 +4,15 @@ export default async function handler(req, res) {
 
     const prisma = new PrismaClient();
 
+    //Get Order
+    const orders = await prisma.order.findMany({
+        where: {
+            state: false
+        }
+    })
+    res.status(200).json(orders);
+
+    //Create Order
     if(req.method === "POST") {
 
         const order = await prisma.order.create({
@@ -14,6 +23,6 @@ export default async function handler(req, res) {
                 date: req.body.date,
             },
         });
-        res.json(order)
+        res.status(200).json(order)
     }
 }
