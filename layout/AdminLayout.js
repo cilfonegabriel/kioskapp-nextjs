@@ -3,11 +3,11 @@ import Image from "next/image";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function AdminLayout({ children, pagina }) {
+export default function AdminLayout({ children, page }) {
   return (
     <>
       <Head>
-        <title>Café - {pagina}</title>
+        <title>Café - {page}</title>
         <meta name="description" content="Quosco Cafetería" />
       </Head>
 
