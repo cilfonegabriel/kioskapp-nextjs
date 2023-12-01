@@ -5,6 +5,10 @@ export default function Order({order}) {
 
     const { id, name, total, pedido } = order
 
+    const completeOrder = () => {
+        console.log("Completing...", id);
+    }
+
     return (
         <div className="border p-10 space-y-5">
             <h3 className="text-2xl font-bold">Order: {id}</h3>
@@ -34,6 +38,14 @@ export default function Order({order}) {
                 <p className="mt-5 font-bold text-4xl text-amber-500">
                     Total to Pay: {formatMoney(total)}
                 </p>
+
+                <button
+                    className="bg-indigo-600 hover:bg-indigo-800 text-white mt-5 md:mt-0 py-3 px-10 uppercase font-bold rounded"
+                    type="button"
+                    onClick={completeOrder}
+                >
+                    Complete order
+                </button>
             </div>
         </div>
     )
