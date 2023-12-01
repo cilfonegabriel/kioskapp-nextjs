@@ -16,8 +16,11 @@ export default function Admin() {
             <p className="text-2xl my-10">Manage your Order</p>
 
             {data && data.length ? data.map(order => 
-            
-            ) : }
+                <Order 
+                    key={order.id}
+                    order={order}
+                />
+            ) : <p>There are no pending orders</p> }
         </AdminLayout>
     )
 }
