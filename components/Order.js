@@ -1,3 +1,6 @@
+import Image from "next/image"
+import {formatMoney} from "../helpers"
+
 export default function Order({order}) {
 
     const { id, name, total, pedido } = order
@@ -8,7 +11,29 @@ export default function Order({order}) {
             <p className="text-lg font-bold">Customer: {name}</p>
 
             <div>
-                
+                {pedido.map(foot => (
+                    <div key={foot.id} className="py-3 flex border-b last-of-type:border-0 items-center">
+                        <div className="w-32">
+                            <Image
+                                width={400}
+                                height={500}
+                                src={`/assets/img/${foot.image}.jpg`}
+                                alt={`Image Foot ${foot.name}`}
+                            />
+                        </div>
+
+                        <div className="p-5 space-y-2">
+                            <h4 className="text-xl font-bold text-amber-500">{foot.name}</h4>
+                            <p className="text-lg font-bold">Amount: {foot.amount}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="md:flex md:items-center md:justify-between my-10">
+                <p className="mt-5 font-bold text-4xl text-amber-500">
+                    Total to Pay: {formatMoney(total)}
+                </p>
             </div>
         </div>
     )
