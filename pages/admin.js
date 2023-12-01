@@ -1,6 +1,15 @@
+import useSWR from "swr"
+import axios from "axios"
 import AdminLayout from "../layout/AdminLayout"
 
 export default function Admin() {
+
+    const fetcher = () => axios('/api/orders').then(datos => datos.data)
+    const {data, error, isLoading} = useSWR('/api/orders', fetcher)
+    console.log(data)
+    console.log(error)
+    console.log(isLoading)
+
 
     return(
         <AdminLayout page={'Admin'}>
