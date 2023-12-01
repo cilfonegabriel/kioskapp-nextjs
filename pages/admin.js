@@ -17,7 +17,7 @@ export default function Admin() {
 
             {data && data.length ? data.map(order => 
             
-            ) :}
+            ) : }
         </AdminLayout>
     )
 }
