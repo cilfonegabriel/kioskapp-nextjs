@@ -42,7 +42,9 @@ This app was created as part of the course "React - The Complete Guide: Hooks Co
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](#)
+- [Live Demo](https://kioskapp-nextjs-production.up.railway.app/)
+- [Live Demo Admin](https://kioskapp-nextjs-production.up.railway.app/admin)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
